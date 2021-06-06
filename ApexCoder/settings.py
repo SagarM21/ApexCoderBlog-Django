@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-mm_@!#k$g#mm-3&@wx&=t9y=gijg^f=v&lo(*hv&jq8ncd)g@v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['apexcoder-blog.herokuapp.com',
+ALLOWED_HOSTS = ['sagar-apexcoder-blog.herokuapp.com',
                 '127.0.0.1'
 ]
 
