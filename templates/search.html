@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block blogactive %}active{% endblock blogactive %}
+{% block css %}
+<style>
+  .container{
+    min-height: 100vh;
+  }
+</style>
+{% endblock css %}
+{% block body %}
+
+<div class="container">
+
+  <h1 class="my-3">Search Results:</h1>
+  {% if blogs|length < 1 %}
+  <p>No search Results</p>
+        Your search query - <b>{{query}}</b> - did not match any documents. <br>
+        Suggestions:
+        <ul>
+        
+        <li>Try different keywords.</li>
+        <li>Make sure that all words are spelled correctly.</li>
+        <li>Try more general keywords.</li>
+        
+        </ul>
+       
+        
+  {% endif %}
+  {% for blog in blogs %}
+
+  <div class="my-2">
+  
+  
+    <h3 class="text-dark"><a href="/blogpost/{{blog.slug}}" class="text-dark">{{blog.title}}</a></h3>
+  
+    <div class="my-3">
+      {{blog.content|slice:245}}...
+    </div>
+    <a href="/blogpost/{{blog.slug}}" class="text-dark"><button class="btn btn-outline-primary btn-sm">Read More..</button>
+    </a>
+  </div>
+
+
+{% endfor %}
+
+
+
+   
+</div>
+</div>
+{% endblock body %}
