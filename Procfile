@@ -1,1 +1,1 @@
-web: gunicorn ApexCoder.wsgi --log-file -
+web: gunicorn ApexCoder.wsgi
